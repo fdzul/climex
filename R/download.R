@@ -140,8 +140,8 @@ download_nasa_power_data <- function(df, lat_col = "latitude", lon_col = "longit
     for (k in seq_along(urls)) {
         local({
             kk <- k
-            h <- curl::new_handle(timeout = 120)
-            curl::multi_add(h, url = urls[kk], pool = pool,
+            h <- curl::new_handle(url = urls[kk], timeout = 120)
+            curl::multi_add(h, pool = pool,
                 done = function(r) {
                     out[[kk]] <<- if (r$status_code == 429 || r$status_code >= 500) {
                         list(error = paste("HTTP", r$status_code))

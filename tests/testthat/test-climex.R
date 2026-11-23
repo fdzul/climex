@@ -102,3 +102,11 @@ test_that("centroids", {
     expect_named(c1, c("CVEGEO", "latitude", "longitude"))
     expect_true(c1$latitude > 20 && c1$latitude < 21)
 })
+
+test_that(".fetch downloads with curl (file:// URL, no network)", {
+    f <- tempfile(fileext = ".json")
+    writeLines(daily_js(1:2), f)
+    r <- climex:::.fetch(c(paste0("file://", f), "file:///no/such/file.json"), 2)
+    expect_equal(parse_response(r[[1]]$body)$T2M, c(21, 22))
+    expect_false(is.null(r[[2]]$error) && is.null(r[[2]]$body))
+})
