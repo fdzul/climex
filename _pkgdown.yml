@@ -1,0 +1,15 @@
+url: https://fdzul.github.io/climex/
+template:
+  bootstrap: 5
+reference:
+  - title: Download
+    contents:
+      - download_nasa_power_data
+  - title: Points
+    contents:
+      - municipalities
+      - centroids
+  - title: Utilities
+    contents:
+      - build_url
+      - parse_response

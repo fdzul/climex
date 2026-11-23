@@ -1,0 +1,34 @@
+Package: climex
+Type: Package
+Title: Climate Data of Mexico from the NASA POWER API
+Version: 0.1.0
+Authors@R:
+    person("Felipe Antonio", "Dzul Manzanilla", , "felipe.dzul.m@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-2085-9141"))
+Description: Climate data of Mexico from the NASA POWER API (daily,
+    monthly or climatological temperature, precipitation, humidity, wind and
+    radiation) for the 2,465 municipalities of Mexico or any set of points.
+    One request per point with all the period, up to five at a time, with
+    retries; the download can be stopped and resumed, and the result has
+    one row per point and date.
+License: MIT + file LICENSE
+URL: https://github.com/fdzul/climex, https://fdzul.github.io/climex/
+BugReports: https://github.com/fdzul/climex/issues
+Depends:
+    R (>= 4.1.0)
+Imports:
+    curl,
+    jsonlite,
+    utils
+Suggests:
+    knitr,
+    rmarkdown,
+    sf,
+    testthat (>= 3.1.7)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en
+LazyData: false
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
