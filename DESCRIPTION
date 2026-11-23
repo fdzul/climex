@@ -2,9 +2,18 @@ Package: climex
 Type: Package
 Title: Climate Data of Mexico from the NASA POWER API
 Version: 0.1.0
-Authors@R:
+Authors@R: c(
     person("Felipe Antonio", "Dzul Manzanilla", , "felipe.dzul.m@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-2085-9141"))
+           comment = c(ORCID = "0000-0002-2085-9141")),
+    person("Fabián", "Correa-Morales", , "fabiancorrea@msn.com", role = "aut",
+           comment = c(ORCID = "0000-0002-6193-1242")),
+    person("Emmanuel", "Morales García", , "emmorales@uv.mx", role = "aut",
+           comment = c(ORCID = "0000-0002-6837-9227")),
+    person("Cecilia", "Cruz López", , "ceccruz@uv.mx", role = "aut",
+           comment = c(ORCID = "0000-0002-9156-5669")),
+    person("Héctor", "Gómez-Dantés", , "hector.gomez@insp.mx", role = "aut",
+           comment = c(ORCID = "0000-0002-2025-3641"))
+  )
 Description: Climate data of Mexico from the NASA POWER API (daily,
     monthly or climatological temperature, precipitation, humidity, wind and
     radiation) for the 2,465 municipalities of Mexico or any set of points.
